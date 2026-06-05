@@ -12,8 +12,8 @@ import {
   SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from "@/components/ui/sidebar";
+import { useSidebar } from "@/hooks/useSidebar";
 import {
   IconDots,
   IconFolder,
@@ -23,13 +23,13 @@ import {
 
 export function NavProjects({
   projects,
-}: {
+}: Readonly<{
   projects: {
     name: string;
     url: string;
     icon: React.ReactNode;
   }[];
-}) {
+}>) {
   const { isMobile } = useSidebar();
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">

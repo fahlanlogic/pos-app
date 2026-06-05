@@ -3,6 +3,8 @@ import SidebarWrapper from "./components/wrapper/sidebar-wrapper";
 import { Skeleton } from "./components/ui/skeleton";
 
 function App() {
+  console.log("masok");
+
   return (
     <SidebarWrapper>
       <div className="grid gap-4 grid-cols-2 md:grid-cols-4">

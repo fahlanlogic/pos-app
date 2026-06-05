@@ -13,13 +13,15 @@ import {
 export function NavSecondary({
   items,
   ...props
-}: {
-  items: {
-    title: string;
-    url: string;
-    icon: React.ReactNode;
-  }[];
-} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+}: Readonly<
+  {
+    items: {
+      title: string;
+      url: string;
+      icon: React.ReactNode;
+    }[];
+  } & React.ComponentPropsWithoutRef<typeof SidebarGroup>
+>) {
   return (
     <SidebarGroup {...props}>
       <SidebarGroupContent>

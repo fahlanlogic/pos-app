@@ -4,7 +4,9 @@ import { Label } from "@/components/ui/label";
 import { SidebarInput } from "@/components/ui/sidebar";
 import { IconSearch } from "@tabler/icons-react";
 
-export function SearchForm({ ...props }: React.ComponentProps<"form">) {
+export function SearchForm({
+  ...props
+}: Readonly<React.ComponentProps<"form">>) {
   return (
     <form {...props}>
       <div className="relative">
