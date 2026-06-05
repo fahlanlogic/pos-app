@@ -1,4 +1,4 @@
-import { SearchForm } from "@/components/search-form";
+import { SearchForm } from "@/components/block/search-form";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useSidebar } from "@/hooks/useSidebar";
 import { IconLayoutSidebar } from "@tabler/icons-react";
+import { ModeToggle } from "../ui/mode-toggle";
 
 export function SiteHeader() {
   const { toggleSidebar } = useSidebar();
@@ -41,7 +42,10 @@ export function SiteHeader() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <SearchForm className="w-full sm:ml-auto sm:w-auto" />
+        <div className="flex gap-2 items-center sm:ml-auto sm:w-auto w-full">
+          <ModeToggle />
+          <SearchForm />
+        </div>
       </div>
     </header>
   );

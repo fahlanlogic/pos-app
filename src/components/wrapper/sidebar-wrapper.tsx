@@ -1,6 +1,6 @@
 import { SidebarInset, SidebarProvider } from "../ui/sidebar";
-import { SiteHeader } from "../site-header";
-import { AppSidebar } from "../app-sidebar";
+import { SiteHeader } from "../block/site-header";
+import { AppSidebar } from "../block/app-sidebar";
 
 export default function SidebarWrapper({
   children,
