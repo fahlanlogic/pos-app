@@ -1,11 +1,20 @@
 import "./App.css";
-import { Button } from "./components/ui/Button";
+import SidebarWrapper from "./components/wrapper/sidebar-wrapper";
+import { Skeleton } from "./components/ui/skeleton";
 
 function App() {
   return (
-    <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen">
-      <Button>Press me</Button>
-    </div>
+    <SidebarWrapper>
+      <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
+        <Skeleton className="w-full h-52" />
+        <Skeleton className="w-full h-52" />
+        <Skeleton className="w-full h-52" />
+        <Skeleton className="w-full h-52" />
+        <Skeleton className="w-full h-72 col-span-2 md:col-span-4" />
+        <Skeleton className="w-full h-52 col-span-2" />
+        <Skeleton className="w-full h-52 col-span-2" />
+      </div>
+    </SidebarWrapper>
   );
 }
 
