@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
+import SidebarWrapper from "./sidebar-wrapper";
 
 const ProtectedRoute = () => {
   const isAuthenticated = localStorage.getItem("token") !== null;
@@ -7,7 +8,11 @@ const ProtectedRoute = () => {
     return <Navigate to="/login" replace />;
   }
 
-  return <Outlet />;
+  return (
+    <SidebarWrapper>
+      <Outlet />
+    </SidebarWrapper>
+  );
 };
 
 export default ProtectedRoute;
