@@ -5,6 +5,7 @@ import DashboardPage from "./pages/private/dashboard";
 import LoginPage from "./pages/public/login";
 import ProtectedRoute from "./components/wrapper/protected-route";
 import NotFoundPage from "./components/wrapper/not-found-page";
+import ProductCategoriesPage from "./pages/private/product-categories";
 
 export const appRouter = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const appRouter = createBrowserRouter([
           {
             path: "/products/:productId",
             element: <ProductPage />,
+          },
+          {
+            path: "/products/categories",
+            element: <ProductCategoriesPage />,
           },
         ],
       },
